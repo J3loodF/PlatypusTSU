@@ -114,12 +114,12 @@ void Platypus::fight(Platypus & other_platypus){//chxubis funqcia
     double fight_ratio=(weight/other_weight)*50;
     double chance = (rand()%100)+1;
     if(chance<fight_ratio){
+        std::cout << "ohh I put a salary on him, here you are, narrow-minded, drink a buzz. you deserve it" <<  std::endl;
         other_platypus.mutate_plat();
-         std::cout << "ohh I put a salary on him, here you are, narrow-minded, drink a buzz. you deserve it" <<  std::endl;
     }
     else{
-        mutate_plat();
          std::cout << "stupid animal.... either duck or beaver i thought you'd win, Mr.burns will kill me" <<  std::endl;
+        mutate_plat();
     }
 
 
