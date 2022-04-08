@@ -32,6 +32,7 @@ void Platypus::mutate_plat(){
     std::this_thread::sleep_for(std::chrono::seconds(8));
     while (get_alive() == 1){
         std::this_thread::sleep_for(std::chrono::seconds(5));
+        std::cout<< "now his age: " << age <<std::endl;
         age_me();
         std::this_thread::sleep_for(std::chrono::seconds(2));
         
@@ -114,12 +115,14 @@ void Platypus::fight(Platypus & other_platypus){//chxubis funqcia
     double fight_ratio=(weight/other_weight)*50;
     double chance = (rand()%100)+1;
     if(chance<fight_ratio){
+            std::cout<< "//CALLING Platypus win\n" << std::endl;
         std::cout << "ohh I put a salary on him, here you are, narrow-minded, drink a buzz. you deserve it" <<  std::endl;
         other_platypus.mutate_plat();
     }
     else{
+    std::cout<< "//SECOND Platypus win\n" << std::endl;    
          std::cout << "stupid animal.... either duck or beaver i thought you'd win, Mr.burns will kill me" <<  std::endl;
-        mutate_plat();
+          mutate_plat();
     }
 
 
@@ -163,7 +166,3 @@ std::cout << "Platypus been created" << std::endl;
 
 
 }
-
-
-
-
